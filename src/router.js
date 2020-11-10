@@ -8,6 +8,7 @@ import SingUpComponent from './pages/SingUp/SingUpComponent'
 
 Vue.use(VueRouter)
 
+//criação de novo router com suas rotas
 const router = new VueRouter({
   routes: [
     { path:'*', redirect: '/'},
@@ -17,7 +18,9 @@ const router = new VueRouter({
   ]
 });
 
-
+//verificação se usuario está logado
+//se estiver, redireciona para home. 
+//se nao, redireciona para login.
 router.beforeEach((to, from, next) => {
   const currentUser = firebase.auth().currentUser;
   const requiresAuth = to.matched.some(record => record.meta.requeresAuth);

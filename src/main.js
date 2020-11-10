@@ -3,9 +3,10 @@ import App from './App.vue'
 import router from './router'
 import firebase from "firebase"
 
-
 Vue.config.productionTip = false
 
+// area relacionada ao firebase
+// utilizado para sistema de autenticação
 var firebaseConfig = {
   apiKey: "AIzaSyACt3qMYBRdNwlh2F9bWseLGEkwKowqSZo",
   authDomain: "vue-auth-36d4a.firebaseapp.com",
@@ -16,9 +17,12 @@ var firebaseConfig = {
   appId: "1:1022551431573:web:a014dc2a427beca2dfbe9c"
 };
 
-// Initialize Firebase
+// iniciando firebase
 firebase.initializeApp(firebaseConfig);
 
+
+
+// injetando configurações
 let app = ''
 firebase.auth().onAuthStateChanged(() =>{
   if(!app){

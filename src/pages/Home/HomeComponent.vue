@@ -1,5 +1,7 @@
 <template>
  <div class="container-fluid">
+     
+     <!-- NAVBAR -->
      <div class="row nav-bar">
          
          <h1>G-FUNC</h1>
@@ -12,8 +14,11 @@
      </div>
 
      <div class="row">
-        <div class="container container-edit col">
 
+
+         <!-- CONTAINER 1 -->
+        <!-------------- FORMULARIO ------------------->
+        <div class="container container-edit col">
             
             <h1>G-FUNC</h1>
             <p>Cadastre, edite e exclua seus funcionários.</p>
@@ -90,7 +95,10 @@
             </ul>            
         </div>
 
-        <!-- INICIO SEGUNDO CONTAINER -->
+
+
+    <!-- INICIO SEGUNDO CONTAINER -->
+    <!-------------- TABELA DE FUNCIONARIOS ------------>
 
         <div class="col col-lg-auto tabela">
             <h5>Funcionários Cadastrados: </h5>
@@ -151,6 +159,13 @@
 </template>
 
 <script>
+
+
+// ------------------------- INICIO AREA SCRIPT -------------------------------
+//imports, metodos e outros. area
+//de processamento da aplicaçao vue
+
+
 import Funcionario from '@/services/func'
 import firebase from 'firebase'
 
@@ -171,8 +186,8 @@ export default {
                 admissao:''
             },
 
-            funcionarios: [],
-            erros: []
+            funcionarios: [], //guarda as informacoes recebidas no get http
+            erros: []         //salvar erros nos metodos post, put e delete
         }
     },
 
@@ -183,10 +198,12 @@ export default {
     
     methods: {
 
+        //atualizar dados da tabela
         att(){
             this.$router.go(0)
         },
 
+        //logout da aplicação
         logout(){
             firebase.auth().signOut().then(() => {
                 alert('Você fez logout da aplicação GFunc\n\nAté mais!')
@@ -194,12 +211,14 @@ export default {
             })
         },
 
+        //carrega os funcionarios do banco de dados
         listar(){
             Funcionario.listar().then(resposta => {
                 this.funcionarios = resposta.data;
             })
         },
 
+        //salva um funcionario no bando de dados
         salvar(){
             if(!this.funcionario._id){
                 Funcionario.salvar(this.funcionario).then(resposta =>{
@@ -230,6 +249,7 @@ export default {
             this.funcionario = funcionario;
         },
 
+        //delta um funcionario
         deletar(funcionario){
             Funcionario.deletar(funcionario).then(resposta =>{
                 this.listar();
@@ -240,9 +260,9 @@ export default {
             })
         },
 
+        //limpar os campos do formulario
         limpar(funcionario){
             this.funcionario ={};
-            //this.listar()
         },
 
 
@@ -250,8 +270,8 @@ export default {
 
 }
 
+// ------------------------- FIM DA AREA SCRIPT -------------------------------
 </script>
 
-<style src="./style.css">
 
-</style>
+<style src="./style.css"></style>
