@@ -9,10 +9,13 @@
                 <label for="password">Senha</label>
                 <input type="password" v-model="senha" class="form-control" name="password" id="password" placeholder="Digite sua senha">
                 <input @click.prevent="login()" type="submit" class="btn btn-success btn-block" value="Registrar">
-                <button @click.prevent="voltar()" class="btn btn-sucess btn-block">Voltar</button>
             </div>
        </form>
-       
+       <p>ou retorne para fazer  
+           <span>
+                <router-link to="/"> Login.</router-link>
+           </span>
+        </p>       
     </div>
 </div>
 </template>
@@ -30,14 +33,9 @@ export default {
 
     methods: {
         login(){
-            this.$router.push({name:'login'})
+            this.$router.replace("home");
             this.$router.go()
         },
-
-        voltar(){
-            this.$router.push({ name: 'login' })
-            this.$router.go()
-        }
 
 
     }

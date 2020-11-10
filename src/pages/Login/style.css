@@ -25,6 +25,11 @@ body{
     text-align: center;
 }
 
+.container-login a{
+    font-weight: bold;
+    color:white;
+}
+
 .container-login h1{
     color:white;
     text-align: center;
@@ -55,6 +60,8 @@ body{
     padding: 10px;
     margin-bottom: 10px;
   }
+
+
   
 
 

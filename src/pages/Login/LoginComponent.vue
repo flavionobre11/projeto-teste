@@ -11,7 +11,11 @@
             <input @click.prevent="login()" type="submit" class="btn btn-success btn-block" value="Login">
            </div>
        </form>
-       <p>Ainda não é cadastrado? <a @click="registrar()" title="Cadastrar-se" style="cursor: pointer; color:#003770">Registrar</a></p>
+       <p>Ainda não é cadastrado? 
+           <span>
+                <router-link to="/registrar"> Cadastre-se</router-link>
+           </span>
+        </p>
     </div>
 </div>
 </template>
@@ -31,11 +35,6 @@ export default {
     methods: {
         login(){
             this.$router.push({name:'home'})
-            this.$router.go()
-        },
-
-        registrar(){
-            this.$router.push({ name:'registrar' })
             this.$router.go()
         }
     }
