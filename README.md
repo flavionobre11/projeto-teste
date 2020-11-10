@@ -1,24 +1,22 @@
 # gfunc
 
-## Project setup
+## Iniciar servidor
 ```
-npm install
+node server.js
+```
+se o server cair por algum motivo (testes) será necessario reinicia-lo. Ou utilizar a cli tool forever, para que reinicie automaticamente
+
+```
+npm i forever -g
 ```
 
-### Compiles and hot-reloads for development
+depois
+
+```
+forever server.js
+```
+
+### Iniciando servidor vue
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
