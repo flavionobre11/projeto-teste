@@ -32,7 +32,7 @@
                         <label for="data">Data de Nascimento</label>
                         <input type="text" v-model="funcionario.data" id= "data" name="data" required class="form-control" placeholder="Ex: 01/01/1999" autocomplete="off" pattern="\d{2}/\d{2}/\d{4}">
                         <label for="endereco">Endereço</label>
-                        <input type="text" v-model="funcionario.endereco" id="endereco" name = "endereco" required class="form-control" placeholder="Ex. Rua 89, 540A" autocomplete="off" pattern= "[\wà-úÀ-Ú ]+[\s]{1,}/?[\wà-úÀ-Ú ]*">
+                        <input type="text" v-model="funcionario.endereco" id="endereco" name = "endereco" required class="form-control" placeholder="Ex. Rua 89 540A" autocomplete="off" pattern= "[\wà-úÀ-Ú, ]+[\s]{1,}/?[\wà-úÀ-Ú, ]*">
                         <label for="bairro">Bairro</label>
                         <input type="text" v-model="funcionario.bairro" id="bairro" name="bairro" required class="form-control" autocomplete="off">
                         <label for="cidade">Cidade</label>
