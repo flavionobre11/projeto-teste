@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    color:white;
+    color:rgb(24, 24, 24);
     border: none;
   }
   /* nav bar*/
@@ -10,6 +10,7 @@
     width: 100vw;
     background-color: #125d96;
     padding: 10px;
+    color: white;
     text-align: center;
   }
 
@@ -21,6 +22,7 @@
   .btnpos button{
     background-color: #ff9400;
     font-weight: bold;
+    color: white;
     text-transform: uppercase;
     margin-left: 0.6vw;
     padding:10px;
@@ -35,11 +37,13 @@
   .nav-bar h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.3em;
+    color: white;
     text-align: left;
     margin-top: 1vh;
   }
 
   .nav-bar small{
+    color: white;
     margin-left: 1.4vw;
     margin-top: 1.4vh;
     vertical-align: middle;
@@ -58,6 +62,7 @@
     padding: 20px 20px;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    color: white;
     background-color: #ff9400;
     border-radius: 10px;
     text-align: center;
@@ -68,11 +73,13 @@
     transition: 0.5s;
   }
 
-  
+
+
   .container-edit h6 {
     text-align: left;
     font-weight: bold;
     margin-bottom: 2vh;
+    color: white;
   }
   
   .container-edit h1{
@@ -112,6 +119,7 @@
     display: block;
     width: 100%;
     text-align: left;
+    color: white;
   }
   
   

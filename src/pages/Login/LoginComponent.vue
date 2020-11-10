@@ -27,7 +27,7 @@ export default {
 
     methods: {
         login(){
-            this.$router.push({name:'home'})
+            this.$router.replace({name:'home'})
         }
     }
 }

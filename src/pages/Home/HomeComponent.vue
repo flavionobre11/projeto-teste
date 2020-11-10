@@ -5,7 +5,6 @@
          <h1>G-FUNC</h1>
          <small>O seu gerenciador de pessoas!</small>
          <div class="btnpos">
-             <button @click="show()">teste</button>
             <button @click.prevent="att()" title="atualizar dados do banco">Atualizar</button>
             <button @click.prevent="logout()" title="home">Log Out</button>
 
@@ -22,19 +21,19 @@
                 <div class="form-group">
                     <h6>Informações Pessoais</h6>
                         <label for="nome">Nome completo</label>
-                        <input type="nome" v-model="funcionario.nome" id="nome" name="nome" required class="form-control" placeholder="Ex. Jose Uzumaki da Silva" autocomplete="off">
+                        <input type="nome" v-model="funcionario.nome" id="nome" name="nome" required class="form-control" placeholder="Ex. Jose Uzumaki da Silva" autocomplete="off" pattern= "[\wà-úÀ-Ú ]+[\s]{1,}/?[\wà-úÀ-Ú ]*">
                         <label for="cpf">CPF</label>
-                        <input type="text" v-model="funcionario.cpf" id = "cpf" name="cpf" required class="form-control" placeholder="Somente números" autocomplete="off">
+                        <input type="text" v-model="funcionario.cpf" id = "cpf" name="cpf" required class="form-control" placeholder="Ex. 000.000.000-00" autocomplete="off" pattern="\d{3}.\d{3}.\d{3}-\d{2}">
                         <label for="data">Data de Nascimento</label>
-                        <input type="text" v-model="funcionario.data" id= "data" name="data" required class="form-control" placeholder="Ex: 01/01/1999">
+                        <input type="text" v-model="funcionario.data" id= "data" name="data" required class="form-control" placeholder="Ex: 01/01/1999" autocomplete="off" pattern="\d{2}/\d{2}/\d{4}">
                         <label for="endereco">Endereço</label>
-                        <input type="text" v-model="funcionario.endereco" id="endereco" name = "endereco" required class="form-control" placeholder="Ex. Rua 89, 540A">
+                        <input type="text" v-model="funcionario.endereco" id="endereco" name = "endereco" required class="form-control" placeholder="Ex. Rua 89, 540A" autocomplete="off" pattern= "[\wà-úÀ-Ú ]+[\s]{1,}/?[\wà-úÀ-Ú ]*">
                         <label for="bairro">Bairro</label>
-                        <input type="text" v-model="funcionario.bairro" id="bairro" name="bairro" required class="form-control">
+                        <input type="text" v-model="funcionario.bairro" id="bairro" name="bairro" required class="form-control" autocomplete="off">
                         <label for="cidade">Cidade</label>
-                        <input type="text" v-model="funcionario.cidade" id="cidade" name="cidade" required class="form-control">
+                        <input type="text" v-model="funcionario.cidade" id="cidade" name="cidade" required class="form-control" autocomplete="off">
                         <label for="estado">Estado</label>
-                        <select name="estado" class="form-control" v-model="funcionario.estado" id="estado" required>
+                        <select name="estado" class="form-control select" v-model="funcionario.estado" id="estado" required autocomplete="off">
                             <option value="">Selecione seu estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -70,11 +69,11 @@
                 <div class="form-group">    
                     <h6>Informações Profissionais</h6>
                     <label for="cargo">Cargo</label>  
-                    <input type="text" v-model="funcionario.cargo" id="cargo" name="cargo" required class="form-control" placeholder="Ex. Estagiário">
+                    <input type="text" v-model="funcionario.cargo" id="cargo" name="cargo" required class="form-control" placeholder="Ex. Estagiário" autocomplete="off">
                     <label for="depto">Departamento</label>  
-                    <input type="text" v-model="funcionario.depto" id="depto" name="depto" required class="form-control" placeholder="Ex. Desenvolvimento">
+                    <input type="text" v-model="funcionario.depto" id="depto" name="depto" required class="form-control" placeholder="Ex. Desenvolvimento" autocomplete="off">
                     <label for="admissao">Data de Admissão</label>  
-                    <input type="text" v-model="funcionario.admissao" id="admissao" required name="admissao" class="form-control" placeholder="Ex: 01/01/1999">
+                    <input type="text" v-model="funcionario.admissao" id="admissao" required name="admissao" class="form-control" placeholder="Ex: 01/01/1999" autocomplete="off" pattern="\d{2}/\d{2}/\d{4}">
 
 
                         
@@ -153,7 +152,6 @@
 
 <script>
 import Funcionario from '@/services/func'
-import teste from '@/services/teste'
 export default {
     data(){
         return{
