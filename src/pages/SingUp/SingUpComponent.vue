@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <div class="container container-login">
+        <div class="container container-registrar">
 
 
         
@@ -9,7 +9,7 @@
             <!-- FORMULÁRIO -->
             <!-- registro de novo usuario -->
 
-            <form action="" class="formulario">
+            <form action="" class="formulario-registrar">
                 <div class="form-group">
                         <label for="email">E-mail</label>
                         <input type="email" v-model="email" class="form-control" name="email" id="email" placeholder="Ex. jose.uzumaki@exemplo.com" autocomplete="off">

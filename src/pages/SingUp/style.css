@@ -5,7 +5,10 @@
 
 
 /* config container centro */
-.container-login {
+.container-registrar {
+    max-width: 400px;
+    width: calc(300px + 10vw);
+    min-width: 300px;
     color: white;
     width: 400px;
     margin-left: auto;
@@ -13,12 +16,12 @@
     padding: 20px 30px;
     margin-top: 10vh;
     margin-bottom: 10vh;
-    background-color: #ff9400;
+    background-color: #125d96;
     border-radius: 10px;
     text-align: center;
 }
 
-.container-login h1{
+.container-registrar h1{
     color:white;
     text-align: center;
     display: block;
@@ -26,25 +29,30 @@
     font-weight: bold;
 }
 
-.container-login p{
+.container-registrar p{
     margin: 0px;
     color: white;
 }
 
+.container-registrar a{
+  font-weight: bold;
+  color:white;
+}
+
 /* formulario */
-.formulario{
+.formulario-registrar{
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
 
-.formulario label {
+.formulario-registrar label {
     display: block;
     color: white;
     text-align: left;
 }
 
-.formulario input {
+.formulario-registrar input {
     padding: 10px;
     margin-bottom: 10px;
   }
@@ -52,7 +60,7 @@
 
 
 /* botao */
-.formulario input[type="submit"] {
+.formulario-registrar input[type="submit"] {
     text-align: center;
     text-transform: uppercase;
     border: none;
@@ -61,22 +69,22 @@
     margin-top: 30px;
     cursor: pointer;
     color: #FFF;
-    background-color: #125d96;
+    background-color: #ff9400;
     font-weight: bold;
   }
 
-  .formulario input[type="submit"]:hover{
-    background-color: #003770;
+  .formulario-registrar input[type="submit"]:hover{
+    background-color: #dd8202;
     transition: 0.5s;
   }
 
   /* placeholders */
-  .formulario input::-webkit-input-placeholder{
+  .formulario-registrar input::-webkit-input-placeholder{
         font-style: italic;
         font-size: .8rem;
   }
 
-  .formulario button{
+  .formulario-registrar button{
     text-align: center;
     text-transform: uppercase;
     border: none;
@@ -89,7 +97,7 @@
     font-weight: bold;
   }
 
-  .formulario button:hover{
+  .formulario-registrar button:hover{
     background-color: #003770;
     color:white;
     transition: 0.5s;

@@ -13,14 +13,17 @@ body{
 
 /* config container centro */
 .container-login {
-    color: white;
-    width: 400px;
+    
+    max-width: 400px;
+    width: calc(300px + 10vw);
+    min-width: 300px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 30px;
     margin-top: 10vh;
     margin-bottom: 10vh;
     background-color: #ff9400;
+    color: white;
     border-radius: 10px;
     text-align: center;
 }
