@@ -4,26 +4,19 @@
 ```
 node server.js
 ```
-ou 
+se o server cair por algum motivo (testes) será necessario reinicia-lo. Ou utilizar a cli tool forever, para que reinicie automaticamente
+
+```
+npm i forever -g
+```
+
+depois
 
 ```
 forever server.js
 ```
 
-### Compiles and hot-reloads for development
+### Iniciando servidor vue
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
