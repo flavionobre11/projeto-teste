@@ -39,6 +39,9 @@ forever server.js
 ```
 
 ### Iniciando servidor vue
+Também é necessario iniciar a aplicação vue.
+
+Da mesma forma, é necessário abrir o prompt de comando e ir até a pasta onde estão os arquivos. Depois, digitar o seguinte comando:
 ```
 npm run serve
 ```
