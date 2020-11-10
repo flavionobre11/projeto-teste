@@ -5,14 +5,13 @@
        <form action="" class="formulario">
            <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="Ex. jose.uzumaki@exemplo.com" autocomplete="off">
+            <input type="email" v-model="email" class="form-control" name="email" id="email" placeholder="Ex. jose.uzumaki@exemplo.com" autocomplete="off">
             <label for="password">Senha</label>
-            <input type="password" class="form-control" name="password" id="password" placeholder="Digite sua senha">
+            <input type="password" v-model="senha" class="form-control" name="password" id="password" placeholder="Digite sua senha">
             <input @click.prevent="login()" type="submit" class="btn btn-success btn-block" value="Login">
            </div>
        </form>
-       <p>Esqueceu a senha? Entre em contato conosco.</p>
-       <p>0800 726 0101</p>
+       <p>Ainda não é cadastrado? <a @click="registrar()" title="Cadastrar-se" style="cursor: pointer; color:#003770">Registrar</a></p>
     </div>
 </div>
 </template>
@@ -22,12 +21,22 @@ export default {
     name: 'LoginComponent',
 
     data(){
+        return{
+            email:'',
+            senha:''
+        }
 
     },
 
     methods: {
         login(){
-            this.$router.replace({name:'home'})
+            this.$router.push({name:'home'})
+            this.$router.go()
+        },
+
+        registrar(){
+            this.$router.push({ name:'registrar' })
+            this.$router.go()
         }
     }
 }
