@@ -14,7 +14,7 @@ A aplicação também foi desenvolvida utilizando VueJs e Bootstrap, para o visu
 
 No sistema de login, primeiramente, pensei em deixar emails admin com maiores acessos (excluir, editar, criar) e outros apenas para consulta. Porém, optei por deixar qualquer usuário se cadastrar e obter acesso a aplicação, visando algo simples.
 
-Também estou cogitando colocar o server.js para rodar em cloud. Acredito que implementarei isso nos próximos dias.
+Também estou cogitando colocar o server.js para rodar em cloud. Acredito que implementarei isso nos próximos dias. Por enquanto, apenas localmente.
 
 
 No mais, é isto :)
