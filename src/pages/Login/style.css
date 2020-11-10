@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    border: none;
+}
+
+body{
+    background-image: url('https://image.freepik.com/vetores-gratis/ilustracao-do-conceito-de-recrutamento_23-2148621465.jpg');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ffecdb;
+}
+
+/* config container centro */
+.container-login {
+    color: white;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: #ff9400;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container-login h1{
+    color:white;
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.container-login p{
+    margin: 0px;
+    color: white;
+}
+
+/* formulario */
+.formulario{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.formulario label {
+    display: block;
+    color: white;
+    text-align: left;
+}
+
+.formulario input {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+
+
+/* botao */
+.formulario input[type="submit"] {
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #125d96;
+    font-weight: bold;
+  }
+
+  .formulario input[type="submit"]:hover{
+    background-color: #003770;
+    transition: 0.5s;
+  }
+
+  /* placeholders */
+  .formulario input::-webkit-input-placeholder{
+        font-style: italic;
+        font-size: .8rem;
+  }
+  
