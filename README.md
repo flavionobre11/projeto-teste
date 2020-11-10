@@ -1,8 +1,10 @@
 # gfunc
 
-## Project setup
+## Iniciar servidor
 ```
-npm install
+node server.js
+ou
+forever server.js
 ```
 
 ### Compiles and hot-reloads for development
