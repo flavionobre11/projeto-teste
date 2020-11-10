@@ -7,7 +7,7 @@
          <h1>G-FUNC</h1>
          <small>O seu gerenciador de pessoas!</small>
          <div class="btnpos">
-            <button @click.prevent="att()" title="atualizar dados do banco">Atualizar</button>
+            <!-- <button @click.prevent="att()" title="atualizar dados do banco">Atualizar</button> -->
             <button @click.prevent="logout()" title="home">Log Out</button>
 
          </div>
@@ -102,7 +102,7 @@
 
         <div class="col col-lg-auto tabela">
             <h5>Funcionários Cadastrados: </h5>
-            <p>Clique no botão acima para atualizar.</p>
+            <!-- <p>Clique no botão acima para atualizar.</p> -->
             <table class="table table-striped table-bordered container container-edit2">
 
                 <thead>
@@ -198,10 +198,10 @@ export default {
     
     methods: {
 
-        //atualizar dados da tabela
-        att(){
-            this.$router.go(0)
-        },
+        // //atualizar dados da tabela
+        // att(){
+        //     this.$router.go(0)
+        // },
 
         //logout da aplicação
         logout(){
