@@ -3,7 +3,10 @@
 ## Iniciar servidor
 ```
 node server.js
-ou
+```
+ou 
+
+```
 forever server.js
 ```
 
