@@ -1,0 +1,230 @@
+/* configuracao geral */
+
+* {
+    box-sizing: border-box;
+    color:white;
+    border: none;
+  }
+  /* nav bar*/
+  .nav-bar{
+    width: 100vw;
+    background-color: #125d96;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .btnpos{
+    margin-left: auto;
+    margin-right: 3vw;
+  }
+
+  .btnpos button{
+    background-color: #ff9400;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 0.6vw;
+    padding:10px;
+    border-radius: 10px;
+  }
+
+  .btnpos button:hover{
+    background-color: #db8915;
+    transition: 0.5s;
+  }
+
+  .nav-bar h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3em;
+    text-align: left;
+    margin-top: 1vh;
+  }
+
+  .nav-bar small{
+    margin-left: 1.4vw;
+    margin-top: 1.4vh;
+    vertical-align: middle;
+  }
+
+
+
+  /* config container centro */
+  .container-edit {
+    box-shadow: 0 0 0.2em gray;
+    width: 15vh;
+    max-width: 85vw;
+    min-width: 15vw;
+    margin-left: 8vw;
+    margin-right: 10px;
+    padding: 20px 20px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: #ff9400;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .container-edit:hover{
+    box-shadow: 0 0 0.8em gray;
+    transition: 0.5s;
+  }
+
+  
+  .container-edit h6 {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 2vh;
+  }
+  
+  .container-edit h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color:white;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #125d96;
+  }
+  
+  .container-edit p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:#125d96;
+    width: auto;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:white;
+  }
+  
+  /* formulario */
+  .container-edit form{
+    margin-bottom: -20px;
+    margin-top: 40px;
+  }
+  
+  .container-edit label, input {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  
+  
+  .container-edit input {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* botao */
+  
+  .button{
+    display:block;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    min-width: 10vh;
+    max-width: 20vh;
+    height: 40px;
+    border-radius: 20px;
+    margin: 30px auto auto auto;
+    cursor: pointer;
+    color: #FFF;
+    background-color:#125d96;
+    font-weight: bold;
+  }
+  
+  .button:hover{
+    background-color: #104f80;
+    color:white;
+    transition: 0.5s;
+  }
+  
+    /* placeholders */
+  .container-edit input::-webkit-input-placeholder{
+    font-style: italic;
+    font-size: .8rem;
+  }
+  
+  
+  /* tables */
+  .container-edit2 {
+    width: calc(100vw - 10vw);
+    margin: 5vh 0 5vh 0; 
+    padding: 20px 40px;
+    border-radius: 7px;
+    background-color: #ff9400;
+    text-align: center;
+  }
+
+  .tabela{
+    display: inline-block;
+    margin-top: 4vh;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+  }
+
+  .icon{
+    margin-bottom: 2px;
+    background-color: #125d96;
+  }
+
+  .icon:hover{
+    background-color: #0e456e;
+    transition: 0.5s;
+  }
+  
+  .tabela h5{
+    width: 280px;
+    vertical-align: middle;
+    color:white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #125d96;
+  }
+
+  .tabela p{
+    width: 280px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:#125d96;
+    text-align: center;
+    margin-bottom: -2vh;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+    background-color:white;
+  }
+  
+  
+  
+  .container-edit2 td{
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .container-edit2 th{
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color:#0a3658;
+  }
+
+  .container-edit2 td:hover{
+    color:white;
+    transition: 0.2s;
+  }
