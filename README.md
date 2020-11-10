@@ -1,4 +1,4 @@
-# gfunc
+# G-func: gerenciador de funcionários
 Aplicação simples que realiza CRUD de funcionários.
 
 Foram utilizados o mongoDB, como banco de dados, e os seguintes frameworks:
