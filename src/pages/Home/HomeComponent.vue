@@ -182,9 +182,6 @@ export default {
     },
     
     methods: {
-        show(){
-            teste.show()
-        },
 
         att(){
             this.$router.go(0)
