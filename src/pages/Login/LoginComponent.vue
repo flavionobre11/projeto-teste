@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import firebase from 'firebase';
+
 export default {
     name: 'LoginComponent',
 
@@ -34,8 +36,16 @@ export default {
 
     methods: {
         login(){
-            this.$router.push({name:'home'})
-            this.$router.go()
+            firebase.auth().signInWithEmailAndPassword(this.email, this.senha).then(
+                (user) => {
+                    this.$router.replace('home')
+                    alert('Login realizado com sucesso!\n\nBem vindo ' + this.email+' :)')
+                },
+                (err) =>{
+                    alert('Login não permitido: verifique os dados\n\n'+ err.message+" :(")
+                }
+            )
+
         }
     }
 }

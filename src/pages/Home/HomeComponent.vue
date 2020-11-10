@@ -152,6 +152,8 @@
 
 <script>
 import Funcionario from '@/services/func'
+import firebase from 'firebase'
+
 export default {
     data(){
         return{
@@ -186,9 +188,10 @@ export default {
         },
 
         logout(){
-            alert('Você fez logout da aplicação GFunc')
-            this.$router.push({name:'login'})
-            this.$router.go()
+            firebase.auth().signOut().then(() => {
+                alert('Você fez logout da aplicação GFunc\n\nAté mais!')
+                this.$router.push({name:'login'})
+            })
         },
 
         listar(){

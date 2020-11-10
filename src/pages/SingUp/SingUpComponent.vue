@@ -7,8 +7,8 @@
                 <label for="email">E-mail</label>
                 <input type="email" v-model="email" class="form-control" name="email" id="email" placeholder="Ex. jose.uzumaki@exemplo.com" autocomplete="off">
                 <label for="password">Senha</label>
-                <input type="password" v-model="senha" class="form-control" name="password" id="password" placeholder="Digite sua senha">
-                <input @click.prevent="login()" type="submit" class="btn btn-success btn-block" value="Registrar">
+                <input type="password" v-model="senha" class="form-control" name="password" id="password" placeholder="Pelo menos 6 digitos">
+                <input @click.prevent="registrar()" type="submit" class="btn btn-success btn-block" value="Registrar">
             </div>
        </form>
        <p>ou retorne para fazer  
@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import firebase from 'firebase';
+
 export default {
     name: 'LoginComponent',
 
@@ -28,13 +30,20 @@ export default {
         return{
             email: '',
             senha: ''  
-        }
+        };
     },
 
     methods: {
-        login(){
-            this.$router.replace("home");
-            this.$router.go()
+        registrar(){
+            firebase.auth().createUserWithEmailAndPassword(this.email, this.senha). then(
+                (user) => {
+                    alert("Aeeee!\nSeja muito bem vind@ a Gfunc :)\n\nO usuário "+this.email+" foi cadastrado com sucesso!\nVocê será redirecionad@ a aplicação.")
+                    this.$router.replace('login')
+                },
+                (err) => {
+                    alert('Aconteceu algo inesperado!\n' +err.message)
+                }
+            )
         },
 
 
