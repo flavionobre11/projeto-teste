@@ -22,6 +22,7 @@ Detalhes de como iniciar aplicação mais abaixo.
 
 
 ## Iniciar servidor
+Primeiramente é necessário abrir o prompt de comando e ir até a pasta onde estão os arquivos (*LEMBRANDO*: é necessário ter o node instalado). Após, digitar o seguinte comando: 
 ```
 node server.js
 ```
