@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+
 
 import loginComponent from './pages/Login/LoginComponent'
 import homeComponent from './pages/Home/HomeComponent'
